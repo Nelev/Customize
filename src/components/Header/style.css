@@ -1,0 +1,15 @@
+.c-Header {
+    display: inline-flex;
+    width: 100%;
+    float: none;
+    font-weight: 800;
+}
+
+.c-Header-logo {
+    background: transparent;
+    width: 70px;
+}
+
+.c-Header .ant-row {
+    width: 100%;
+}
