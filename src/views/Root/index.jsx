@@ -1,7 +1,7 @@
 import { Divider, Row, Col } from "antd";
 import React from "react";
 import Header from "../../components/Header";
-import Container from "../../components/Container";
+import RootContainer from "../../components/RootContainer";
 import "./style.css";
 
 class Root extends React.Component {
@@ -14,7 +14,7 @@ class Root extends React.Component {
                         <Col span={16}>
                             <Header />
                             <Divider />
-                            <Container />
+                            <RootContainer />
                         </Col>
                     </span>
                     <Col span={4} />

@@ -1,0 +1,19 @@
+.c-WorkContainer {
+    background-image: url("../../resources/images/tshirt.jpg");
+    height: 600px;
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+img {
+    margin-top: 150px;
+    margin-left: 130px;
+    background-size: cover;
+    max-width: 50%;
+    max-height: 50%;
+}

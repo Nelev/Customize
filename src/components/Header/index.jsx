@@ -1,12 +1,16 @@
 import { Breadcrumb, Button, Col, Row } from "antd";
 import React from "react";
+import { Link } from "react-router-dom";
 
-import logo from "./logo.png";
 import "./style.css";
 
 export default class Header extends React.Component {
     renderCreateButton() {
-        return <Button type="primary">Create!</Button>;
+        return (
+            <Button type="primary">
+                <Link to="create">Create!</Link>
+            </Button>
+        );
     }
     renderLinks() {
         return (
@@ -25,7 +29,7 @@ export default class Header extends React.Component {
     }
 
     renderLogo() {
-        return <img src={logo} alt="" className="c-Header-logo" />;
+        return;
     }
 
     render() {
