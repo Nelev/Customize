@@ -2,20 +2,20 @@ import React from "react";
 import { Button } from "antd";
 
 export default class ImageController extends React.Component {
-    handleWidth = () => {
-        const { handleIncreaseWidth } = this.props;
-        console.log("component");
-        handleIncreaseWidth();
-    };
-
     render() {
-        const { handleIncreaseWidth } = this.props;
+        const { handleIncreaseWidth, handleDecreaseWidth } = this.props;
         return (
             <div>
-                <Button onClick={handleIncreaseWidth} />
-                <Button />
-                <Button />
-                <Button />
+                <Button
+                    type="primary"
+                    icon="left"
+                    onClick={handleDecreaseWidth}
+                />
+                <Button
+                    type="primary"
+                    icon="right"
+                    onClick={handleIncreaseWidth}
+                />
             </div>
         );
     }

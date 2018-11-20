@@ -1,5 +1,6 @@
 import React from "react";
-import { Button } from "antd";
+
+import ImageController from "../ImageController";
 import "./style.css";
 
 export default class WorkContainer extends React.Component {
@@ -7,21 +8,13 @@ export default class WorkContainer extends React.Component {
 
     handleIncreaseWidth = () => {
         const newWidth = this.state.imgWidth + 40;
-        console.log(newWidth, "NEW");
         this.setState({ imgWidth: newWidth });
     };
 
-    renderButtons() {
-        return (
-            <div>
-                <Button onClick={this.handleIncreaseWidth} />
-                <Button />
-                <Button />
-                <Button />
-            </div>
-        );
-    }
-
+    handleDecreaseWidth = () => {
+        const newWidth = this.state.imgWidth - 40;
+        this.setState({ imgWidth: newWidth });
+    };
     render() {
         const { imgUploaded } = this.props;
         return (
@@ -36,7 +29,10 @@ export default class WorkContainer extends React.Component {
                         }}
                     />
                 </div>
-                {this.renderButtons()}
+                <ImageController
+                    handleIncreaseWidth={this.handleIncreaseWidth}
+                    handleDecreaseWidth={this.handleDecreaseWidth}
+                />
             </div>
         );
     }
