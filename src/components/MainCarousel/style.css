@@ -1,0 +1,34 @@
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    background: black;
+    overflow: hidden;
+}
+
+.c-Slider-Footer {
+    text-align: left;
+}
+
+.ant-card-cover {
+    width: 100%;
+    height: 100%;
+}
+
+.ant-card .ant-card-bordered .ant-card-hoverable {
+    width: 100px;
+    height: 200px;
+}
+
+.c-Carousel-Image {
+    margin-top: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.c-Main-Carousel {
+    width: 500px;
+    height: 600px;
+}

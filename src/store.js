@@ -4,7 +4,7 @@ import thunk from "redux-thunk";
 
 import reducer from "./reducer";
 
-const LOG_REDUX_ACTIONS = false;
+const LOG_REDUX_ACTIONS = true;
 
 const middleware = [
     thunk,

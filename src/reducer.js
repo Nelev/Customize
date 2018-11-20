@@ -1,8 +1,7 @@
 import { combineReducers } from "redux";
-import { reducer as form } from "redux-form";
 import { routerReducer } from "react-router-redux";
+import rootReducer from "./views/Root/reducer";
 
 export default combineReducers({
-    form,
-    views: combineReducers({ routing: routerReducer })
+    views: combineReducers({ routing: routerReducer, root: rootReducer })
 });
