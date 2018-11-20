@@ -1,6 +1,7 @@
 import React from "react";
 
 import WorkContainer from "../../components/WorkContainer";
+import ImageController from "../../components/ImageController";
 
 class Create extends React.Component {
     state = {
@@ -26,6 +27,7 @@ class Create extends React.Component {
         return (
             <div className="v-Create-Content">
                 <WorkContainer showUploadList imgUploaded={this.state.imgurl} />
+                <ImageController />
                 <input type="file" onChange={e => this.handleImageUpload(e)} />
             </div>
         );
