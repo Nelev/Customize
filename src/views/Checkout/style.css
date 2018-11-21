@@ -1,0 +1,9 @@
+.v-Checkout {
+    text-align: left;
+}
+
+.v-Checkout .ant-input {
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

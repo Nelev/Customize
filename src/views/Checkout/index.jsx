@@ -4,6 +4,7 @@ import { history } from "react-router-prop-types";
 import { Field, reduxForm } from "redux-form";
 
 import Header from "../../components/Header";
+import "./style.css";
 
 class Checkout extends React.Component {
     static propTypes = {
@@ -18,9 +19,9 @@ class Checkout extends React.Component {
         const { pristine, reset, submitting } = this.props;
         return (
             <div className="v-Checkout">
-                <Row>
-                    <Col span={8} />
-                    <Col span={8}>
+                <Row gutter={16}>
+                    <Col span={4} />
+                    <Col span={16}>
                         <Header />
                         <form onSubmit={this.handleSubmit}>
                             <div>
@@ -88,12 +89,12 @@ class Checkout extends React.Component {
                                     disabled={pristine || submitting}
                                     onClick={reset}
                                 >
-                                    Clear Values
+                                    Clear
                                 </button>
                             </div>
                         </form>
                     </Col>
-                    <Col span={8} />
+                    <Col span={4} />
                 </Row>
             </div>
         );

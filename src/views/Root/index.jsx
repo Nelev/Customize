@@ -1,4 +1,4 @@
-import { Divider, Row, Col } from "antd";
+import { Col, Row } from "antd";
 import PropTypes from "prop-types";
 import React from "react";
 import { connect } from "react-redux";
@@ -34,7 +34,6 @@ class Root extends React.Component {
                     <div className="v-Main">
                         <Col span={16}>
                             <Header />
-                            <Divider />
                             <Col span={10}>
                                 <div>
                                     <b>Check out our latest works!</b>

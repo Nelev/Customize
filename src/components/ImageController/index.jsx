@@ -21,7 +21,6 @@ export default class ImageController extends React.Component {
         } = this.props;
         return (
             <div className="c-Controller">
-                <Divider />
                 <span>
                     <b>Use the pad to adjust image size!</b>
                 </span>

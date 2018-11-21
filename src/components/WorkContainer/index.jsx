@@ -1,5 +1,4 @@
 import React from "react";
-
 import ImageController from "../ImageController";
 import "./style.css";
 
@@ -58,7 +57,6 @@ export default class WorkContainer extends React.Component {
     render() {
         const { imgUploaded } = this.props;
         const gotUploaded = imgUploaded !== null ? true : false;
-        console.log(gotUploaded);
         return (
             <div className="c-Create">
                 <div className="c-WorkContainer">
