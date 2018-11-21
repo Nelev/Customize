@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Create from "./views/Create";
+import Checkout from "./views/Checkout";
 import Root from "./views/Root";
 import "./index.css";
 import store from "./store";
@@ -16,6 +17,7 @@ const App = (
                 <Switch>
                     <Route exact path="/" component={Root} />
                     <Route path="/create" component={Create} />
+                    <Route path="/checkout" component={Checkout} />
                 </Switch>
             </BrowserRouter>
         </Provider>

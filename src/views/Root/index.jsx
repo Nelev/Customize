@@ -11,6 +11,7 @@ import { statePropType } from "./reducer";
 import MainCarousel from "../../components/MainCarousel";
 
 import "./style.css";
+import MainSidePanel from "../../components/MainSidePanel";
 
 class Root extends React.Component {
     static propTypes = {
@@ -30,18 +31,30 @@ class Root extends React.Component {
             <div>
                 <Row gutter={16}>
                     <Col span={4} />
-                    <span className="v-main">
+                    <div className="v-Main">
                         <Col span={16}>
                             <Header />
                             <Divider />
-                            <MainCarousel
-                                carouselImages={carouselImages}
-                                isFetchingCarouselImages={
-                                    isFetchingCarouselImages
-                                }
-                            />
+                            <div>
+                                <b>Check out our last works!</b>
+                            </div>
+                            <Col span={10}>
+                                <MainCarousel
+                                    carouselImages={carouselImages}
+                                    isFetchingCarouselImages={
+                                        isFetchingCarouselImages
+                                    }
+                                />
+                            </Col>
+                            <Col span={6}>
+                                <div>
+                                    Press <b>Create Button</b> and get started!
+                                </div>
+                                <Col />
+                                <MainSidePanel />
+                            </Col>
                         </Col>
-                    </span>
+                    </div>
                     <Col span={4} />
                 </Row>
             </div>

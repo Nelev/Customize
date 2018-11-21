@@ -13,11 +13,9 @@ class Create extends React.Component {
     };
 
     handleImageUpload = e => {
-        console.log(this.props);
         let { setImage } = this.props;
         let reader = new FileReader();
         let file = e.target.files[0];
-
         reader.onloadend = () => {
             setImage(reader.result, file);
         };

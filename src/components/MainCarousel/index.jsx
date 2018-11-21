@@ -68,7 +68,7 @@ export default class MainCarousel extends React.Component {
     render() {
         return (
             <div className={classNames("c-Main-Carousel")}>
-                <Carousel effect="fade">
+                <Carousel effect="fade" autoplay="true">
                     {this.renderSpinner()}
                     {this.renderContentCards()}
                 </Carousel>
