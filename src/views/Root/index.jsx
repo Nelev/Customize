@@ -35,10 +35,10 @@ class Root extends React.Component {
                         <Col span={16}>
                             <Header />
                             <Divider />
-                            <div>
-                                <b>Check out our latest works!</b>
-                            </div>
                             <Col span={10}>
+                                <div>
+                                    <b>Check out our latest works!</b>
+                                </div>
                                 <MainCarousel
                                     carouselImages={carouselImages}
                                     isFetchingCarouselImages={
