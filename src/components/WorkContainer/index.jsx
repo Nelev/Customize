@@ -7,7 +7,7 @@ import "./style.css";
 export const spacingUnit = 20;
 
 export default class WorkContainer extends React.Component {
-    state = { imgWidth: 100, imgHeight: 100, imgTop: 0, imgLeft: 0 };
+    state = { imgWidth: 100, imgHeight: 100, imgTop: 200, imgLeft: 200 };
 
     handleDecreaseHeight = () => {
         const newHeight = this.state.imgHeight - spacingUnit;
