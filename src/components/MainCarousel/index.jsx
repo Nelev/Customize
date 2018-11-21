@@ -1,6 +1,6 @@
 import { Carousel, Card, Divider, Spin } from "antd";
-import React from "react";
 import classNames from "classnames";
+import React from "react";
 
 import "./style.css";
 

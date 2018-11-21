@@ -1,10 +1,11 @@
-import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import React from "react";
+import { connect } from "react-redux";
+import { history } from "react-router-prop-types";
+import { bindActionCreators } from "redux";
+
 import { setImage } from "./actions";
 import WorkContainer from "../../components/WorkContainer";
-import { bindActionCreators } from "redux";
-import PropTypes from "prop-types";
-import { history } from "react-router-prop-types";
 
 class Create extends React.Component {
     static propTypes = {

@@ -1,7 +1,7 @@
-import React from "react";
 import { Col, Input, Row } from "antd";
-import { Field, reduxForm } from "redux-form";
+import React from "react";
 import { history } from "react-router-prop-types";
+import { Field, reduxForm } from "redux-form";
 
 import Header from "../../components/Header";
 

@@ -1,14 +1,15 @@
 import React from "react";
-import { IntlProvider } from "react-intl";
 import ReactDOM from "react-dom";
+import { IntlProvider } from "react-intl";
 import { Provider } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Create from "./views/Create";
 import Checkout from "./views/Checkout";
 import Root from "./views/Root";
-import "./index.css";
+
 import store from "./store";
+import "./index.css";
 
 const App = (
     <IntlProvider locale="en">

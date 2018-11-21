@@ -1,17 +1,17 @@
-import { connect } from "react-redux";
 import { Divider, Row, Col } from "antd";
-import React from "react";
-import { bindActionCreators } from "redux";
 import PropTypes from "prop-types";
+import React from "react";
+import { connect } from "react-redux";
 import { history } from "react-router-prop-types";
+import { bindActionCreators } from "redux";
 
 import { fetchCarouselImages } from "./actions";
 import Header from "../../components/Header";
-import { statePropType } from "./reducer";
 import MainCarousel from "../../components/MainCarousel";
+import MainSidePanel from "../../components/MainSidePanel";
+import { statePropType } from "./reducer";
 
 import "./style.css";
-import MainSidePanel from "../../components/MainSidePanel";
 
 class Root extends React.Component {
     static propTypes = {
@@ -36,7 +36,7 @@ class Root extends React.Component {
                             <Header />
                             <Divider />
                             <div>
-                                <b>Check out our last works!</b>
+                                <b>Check out our latest works!</b>
                             </div>
                             <Col span={10}>
                                 <MainCarousel
