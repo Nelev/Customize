@@ -30,7 +30,7 @@ export default (state = defaultState, action) => {
         case FETCH_CAROUSEL_IMAGES_SUCCESS:
             return {
                 ...state,
-                isFetchingImages: false,
+                isFetchingCarouselImages: false,
                 carouselImages: payload
             };
         case FETCH_CAROUSEL_IMAGES_ERROR:

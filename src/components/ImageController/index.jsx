@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Divider } from "antd";
+import { Button, Divider, Tooltip } from "antd";
 
 import "./style.css";
 
@@ -13,7 +13,9 @@ export default class ImageController extends React.Component {
             handleIncreaseTop,
             handleDecreaseTop,
             handleIncreaseLeft,
-            handleDecreaseLeft
+            handleDecreaseLeft,
+            handleResetPosition,
+            handleResetSizes
         } = this.props;
         return (
             <div className="c-Controller">
@@ -27,47 +29,64 @@ export default class ImageController extends React.Component {
                         <tr>
                             <td />
                             <td>
-                                <Button
-                                    className="c-Controller-Button"
-                                    type="primary"
-                                    icon="up"
-                                    onClick={handleIncreaseHeight}
-                                    shape="circle"
-                                />
+                                <Tooltip title="Increase Image Heigth">
+                                    <Button
+                                        className="c-Controller-Button"
+                                        type="primary"
+                                        icon="up"
+                                        onClick={handleIncreaseHeight}
+                                        shape="circle"
+                                    />
+                                </Tooltip>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <Button
-                                    className="c-Controller-Button"
-                                    type="primary"
-                                    icon="left"
-                                    onClick={handleDecreaseWidth}
-                                    shape="circle"
-                                />
+                                <Tooltip title="Decrease Image Width">
+                                    <Button
+                                        className="c-Controller-Button"
+                                        type="primary"
+                                        icon="left"
+                                        onClick={handleDecreaseWidth}
+                                        shape="circle"
+                                    />
+                                </Tooltip>
                             </td>
-                            <td />
                             <td>
-                                {" "}
-                                <Button
-                                    className="c-Controller-Button"
-                                    type="primary"
-                                    icon="right"
-                                    onClick={handleIncreaseWidth}
-                                    shape="circle"
-                                />
+                                <Tooltip title="Reset Image Sizes">
+                                    <Button
+                                        className="c-Controller-Button"
+                                        type="primary"
+                                        icon="delete"
+                                        onClick={handleResetSizes}
+                                        shape="circle"
+                                    />
+                                </Tooltip>
+                            </td>
+                            <td>
+                                <Tooltip title="Increase Image Width">
+                                    <Button
+                                        className="c-Controller-Button"
+                                        type="primary"
+                                        icon="right"
+                                        onClick={handleIncreaseWidth}
+                                        shape="circle"
+                                    />
+                                </Tooltip>
                             </td>
                         </tr>
                         <tr>
                             <td />
                             <td>
-                                <Button
-                                    className="c-Controller-Button"
-                                    type="primary"
-                                    icon="down"
-                                    onClick={handleDecreaseHeight}
-                                    shape="circle"
-                                />
+                                <Tooltip title="Decrease Image Heigth">
+                                    <Button
+                                        className="c-Controller-Button"
+                                        type="primary"
+                                        icon="down"
+                                        onClick={handleDecreaseHeight}
+                                        shape="circle"
+                                    />
+                                </Tooltip>
                             </td>
                         </tr>
                     </table>
@@ -82,46 +101,64 @@ export default class ImageController extends React.Component {
                         <tr>
                             <td />
                             <td>
-                                <Button
-                                    className="c-Controller-Button"
-                                    type="primary"
-                                    icon="up"
-                                    onClick={handleDecreaseTop}
-                                    shape="circle"
-                                />
+                                <Tooltip title="Move Image Up">
+                                    <Button
+                                        className="c-Controller-Button"
+                                        type="primary"
+                                        icon="up"
+                                        onClick={handleDecreaseTop}
+                                        shape="circle"
+                                    />
+                                </Tooltip>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <Button
-                                    className="c-Controller-Button"
-                                    type="primary"
-                                    icon="left"
-                                    onClick={handleDecreaseLeft}
-                                    shape="circle"
-                                />
+                                <Tooltip title="Move Image Left">
+                                    <Button
+                                        className="c-Controller-Button"
+                                        type="primary"
+                                        icon="left"
+                                        onClick={handleDecreaseLeft}
+                                        shape="circle"
+                                    />
+                                </Tooltip>
                             </td>
-                            <td />
                             <td>
-                                <Button
-                                    className="c-Controller-Button"
-                                    type="primary"
-                                    icon="right"
-                                    onClick={handleIncreaseLeft}
-                                    shape="circle"
-                                />
+                                <Tooltip title="Reset Image Position">
+                                    <Button
+                                        className="c-Controller-Button"
+                                        type="primary"
+                                        icon="delete"
+                                        onClick={handleResetPosition}
+                                        shape="circle"
+                                    />
+                                </Tooltip>
+                            </td>
+                            <td>
+                                <Tooltip title="Move Image Right">
+                                    <Button
+                                        className="c-Controller-Button"
+                                        type="primary"
+                                        icon="right"
+                                        onClick={handleIncreaseLeft}
+                                        shape="circle"
+                                    />
+                                </Tooltip>
                             </td>
                         </tr>
                         <tr>
                             <td />
                             <td>
-                                <Button
-                                    className="c-Controller-Button"
-                                    type="primary"
-                                    icon="down"
-                                    onClick={handleIncreaseTop}
-                                    shape="circle"
-                                />
+                                <Tooltip title="Move Image Down">
+                                    <Button
+                                        className="c-Controller-Button"
+                                        type="primary"
+                                        icon="down"
+                                        onClick={handleIncreaseTop}
+                                        shape="circle"
+                                    />
+                                </Tooltip>
                             </td>
                         </tr>
                     </table>

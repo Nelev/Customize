@@ -58,7 +58,7 @@ export default class MainCarousel extends React.Component {
     }
 
     renderSpinner() {
-        return this.props.isFetchingCarouselImages ? (
+        return this.props.isFetchingCarouselImages === true ? (
             <div>
                 <Spin size="large" />
             </div>

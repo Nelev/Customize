@@ -49,6 +49,13 @@ export default class WorkContainer extends React.Component {
         this.setState({ imgWidth: newWidth });
     };
 
+    handleResetPosition = () => {
+        this.setState({ imgTop: 200, imgLeft: 200 });
+    };
+
+    handleResetSizes = () => {
+        this.setState({ imgHeight: 100, imgWidth: 100 });
+    };
     render() {
         const { imgUploaded } = this.props;
         return (
@@ -80,6 +87,8 @@ export default class WorkContainer extends React.Component {
                             handleDecreaseTop={this.handleDecreaseTop}
                             handleIncreaseLeft={this.handleIncreaseLeft}
                             handleDecreaseLeft={this.handleDecreaseLeft}
+                            handleResetPosition={this.handleResetPosition}
+                            handleResetSizes={this.handleResetSizes}
                         />
                     </Col>
                 </Row>

@@ -50,7 +50,10 @@ class Root extends React.Component {
 }
 
 function mapStateToProps(state) {
-    return { carouselImages: state.views.root.carouselImages };
+    return {
+        carouselImages: state.views.root.carouselImages,
+        isFetchingCarouselImages: state.views.root.isFetchingCarouselImages
+    };
 }
 
 function mapDispatchToProps(dispatch) {
