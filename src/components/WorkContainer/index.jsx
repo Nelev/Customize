@@ -61,7 +61,7 @@ export default class WorkContainer extends React.Component {
         return (
             <div className="c-Create">
                 <Row>
-                    <Col span={9}>
+                    <Col span={7}>
                         <div className="c-WorkContainer">
                             <div className="c-WorkContainer-imgupload">
                                 <img
@@ -78,18 +78,20 @@ export default class WorkContainer extends React.Component {
                         </div>
                     </Col>
                     <Col span={4}>
-                        <ImageController
-                            handleIncreaseWidth={this.handleIncreaseWidth}
-                            handleDecreaseWidth={this.handleDecreaseWidth}
-                            handleDecreaseHeight={this.handleDecreaseHeight}
-                            handleIncreaseHeight={this.handleIncreaseHeight}
-                            handleIncreaseTop={this.handleIncreaseTop}
-                            handleDecreaseTop={this.handleDecreaseTop}
-                            handleIncreaseLeft={this.handleIncreaseLeft}
-                            handleDecreaseLeft={this.handleDecreaseLeft}
-                            handleResetPosition={this.handleResetPosition}
-                            handleResetSizes={this.handleResetSizes}
-                        />
+                        <div className="c-Image-Controller">
+                            <ImageController
+                                handleIncreaseWidth={this.handleIncreaseWidth}
+                                handleDecreaseWidth={this.handleDecreaseWidth}
+                                handleDecreaseHeight={this.handleDecreaseHeight}
+                                handleIncreaseHeight={this.handleIncreaseHeight}
+                                handleIncreaseTop={this.handleIncreaseTop}
+                                handleDecreaseTop={this.handleDecreaseTop}
+                                handleIncreaseLeft={this.handleIncreaseLeft}
+                                handleDecreaseLeft={this.handleDecreaseLeft}
+                                handleResetPosition={this.handleResetPosition}
+                                handleResetSizes={this.handleResetSizes}
+                            />
+                        </div>
                     </Col>
                 </Row>
             </div>

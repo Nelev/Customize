@@ -13,6 +13,14 @@ img {
     margin-top: 150px;
     margin-left: 130px;
     background-size: cover;
-    max-width: 50%;
-    max-height: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .c-Image-Controller {
+        float: none;
+        display: block;
+        width: 100%;
+    }
 }
