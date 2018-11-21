@@ -4,26 +4,48 @@ import { Col, Row } from "antd";
 import ImageController from "../ImageController";
 import "./style.css";
 
+export const spacingUnit = 20;
+
 export default class WorkContainer extends React.Component {
-    state = { imgWidth: 100, imgHeight: 100 };
+    state = { imgWidth: 100, imgHeight: 100, imgTop: 0, imgLeft: 0 };
 
     handleDecreaseHeight = () => {
-        const newHeight = this.state.imgHeight - 40;
+        const newHeight = this.state.imgHeight - spacingUnit;
         this.setState({ imgHeight: newHeight });
     };
 
+    handleDecreaseLeft = () => {
+        const newLeft = this.state.imgLeft - spacingUnit;
+        this.setState({ imgLeft: newLeft });
+    };
+
+    handleDecreaseTop = () => {
+        const newTop = this.state.imgTop - spacingUnit;
+        this.setState({ imgTop: newTop });
+    };
+
     handleDecreaseWidth = () => {
-        const newWidth = this.state.imgWidth - 40;
+        const newWidth = this.state.imgWidth - spacingUnit;
         this.setState({ imgWidth: newWidth });
     };
 
     handleIncreaseHeight = () => {
-        const newHeight = this.state.imgHeight + 40;
+        const newHeight = this.state.imgHeight + spacingUnit;
         this.setState({ imgHeight: newHeight });
     };
 
+    handleIncreaseLeft = () => {
+        const newLeft = this.state.imgLeft + spacingUnit;
+        this.setState({ imgLeft: newLeft });
+    };
+
+    handleIncreaseTop = () => {
+        const newTop = this.state.imgTop + spacingUnit;
+        this.setState({ imgTop: newTop });
+    };
+
     handleIncreaseWidth = () => {
-        const newWidth = this.state.imgWidth + 40;
+        const newWidth = this.state.imgWidth + spacingUnit;
         this.setState({ imgWidth: newWidth });
     };
 
@@ -40,7 +62,9 @@ export default class WorkContainer extends React.Component {
                                     alt=""
                                     style={{
                                         width: this.state.imgWidth,
-                                        height: this.state.imgHeight
+                                        height: this.state.imgHeight,
+                                        marginTop: this.state.imgTop,
+                                        marginLeft: this.state.imgLeft
                                     }}
                                 />
                             </div>
@@ -52,6 +76,10 @@ export default class WorkContainer extends React.Component {
                             handleDecreaseWidth={this.handleDecreaseWidth}
                             handleDecreaseHeight={this.handleDecreaseHeight}
                             handleIncreaseHeight={this.handleIncreaseHeight}
+                            handleIncreaseTop={this.handleIncreaseTop}
+                            handleDecreaseTop={this.handleDecreaseTop}
+                            handleIncreaseLeft={this.handleIncreaseLeft}
+                            handleDecreaseLeft={this.handleDecreaseLeft}
                         />
                     </Col>
                 </Row>
