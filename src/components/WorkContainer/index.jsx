@@ -1,4 +1,3 @@
-import { Col, Row } from "antd";
 import React from "react";
 
 import ImageController from "../ImageController";
@@ -62,41 +61,35 @@ export default class WorkContainer extends React.Component {
         console.log(gotUploaded);
         return (
             <div className="c-Create">
-                <Row>
-                    <Col span={7}>
-                        <div className="c-WorkContainer">
-                            <div className="c-WorkContainer-imgupload">
-                                <img
-                                    src={imgUploaded}
-                                    alt=""
-                                    style={{
-                                        width: this.state.imgWidth,
-                                        height: this.state.imgHeight,
-                                        marginTop: this.state.imgTop,
-                                        marginLeft: this.state.imgLeft
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    </Col>
-                    <Col span={4}>
-                        <div className="c-Image-Controller">
-                            <ImageController
-                                gotUploaded={gotUploaded}
-                                handleIncreaseWidth={this.handleIncreaseWidth}
-                                handleDecreaseWidth={this.handleDecreaseWidth}
-                                handleDecreaseHeight={this.handleDecreaseHeight}
-                                handleIncreaseHeight={this.handleIncreaseHeight}
-                                handleIncreaseTop={this.handleIncreaseTop}
-                                handleDecreaseTop={this.handleDecreaseTop}
-                                handleIncreaseLeft={this.handleIncreaseLeft}
-                                handleDecreaseLeft={this.handleDecreaseLeft}
-                                handleResetPosition={this.handleResetPosition}
-                                handleResetSizes={this.handleResetSizes}
-                            />
-                        </div>
-                    </Col>
-                </Row>
+                <div className="c-WorkContainer">
+                    <div className="c-WorkContainer-imgupload">
+                        <img
+                            src={imgUploaded}
+                            alt=""
+                            style={{
+                                width: this.state.imgWidth,
+                                height: this.state.imgHeight,
+                                marginTop: this.state.imgTop,
+                                marginLeft: this.state.imgLeft
+                            }}
+                        />
+                    </div>
+                </div>
+                <div className="c-Image-Controller">
+                    <ImageController
+                        gotUploaded={gotUploaded}
+                        handleIncreaseWidth={this.handleIncreaseWidth}
+                        handleDecreaseWidth={this.handleDecreaseWidth}
+                        handleDecreaseHeight={this.handleDecreaseHeight}
+                        handleIncreaseHeight={this.handleIncreaseHeight}
+                        handleIncreaseTop={this.handleIncreaseTop}
+                        handleDecreaseTop={this.handleDecreaseTop}
+                        handleIncreaseLeft={this.handleIncreaseLeft}
+                        handleDecreaseLeft={this.handleDecreaseLeft}
+                        handleResetPosition={this.handleResetPosition}
+                        handleResetSizes={this.handleResetSizes}
+                    />
+                </div>
             </div>
         );
     }

@@ -21,7 +21,7 @@ export default class Header extends React.Component {
     }
 
     renderLogo() {
-        return <img alt="" src="logo.png" />;
+        return <img alt="" src="url(./logo.png)" />;
     }
 
     render() {

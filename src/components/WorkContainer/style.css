@@ -9,6 +9,10 @@
     background-size: cover;
 }
 
+.c-Create {
+    display: inline-flex;
+}
+
 img {
     margin-top: 150px;
     margin-left: 130px;
@@ -17,10 +21,8 @@ img {
     height: 100%;
 }
 
-@media screen and (max-width: 600px) {
-    .c-Image-Controller {
-        float: none;
+@media screen and (max-width: 550px) {
+    .c-Create {
         display: block;
-        width: 100%;
     }
 }
