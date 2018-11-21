@@ -27,7 +27,10 @@ class Create extends React.Component {
         return (
             <div className="v-Create-Content">
                 <WorkContainer showUploadList imgUploaded={imgUrl} />
-                <input type="file" onChange={e => this.handleImageUpload(e)} />
+                <input
+                    type="file"
+                    onChange={event => this.handleImageUpload(event)}
+                />
             </div>
         );
     }

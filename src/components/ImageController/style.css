@@ -1,3 +1,11 @@
 .c-Controller-Table table {
     margin: auto;
 }
+
+.c-Checkout {
+    text-align: center;
+}
+
+.c-Checkout .ant-btn .ant-btn-primary {
+    display: inline-block;
+}

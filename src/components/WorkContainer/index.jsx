@@ -58,6 +58,8 @@ export default class WorkContainer extends React.Component {
     };
     render() {
         const { imgUploaded } = this.props;
+        const gotUploaded = imgUploaded !== null ? true : false;
+        console.log(gotUploaded);
         return (
             <div className="c-Create">
                 <Row>
@@ -80,6 +82,7 @@ export default class WorkContainer extends React.Component {
                     <Col span={4}>
                         <div className="c-Image-Controller">
                             <ImageController
+                                gotUploaded={gotUploaded}
                                 handleIncreaseWidth={this.handleIncreaseWidth}
                                 handleDecreaseWidth={this.handleDecreaseWidth}
                                 handleDecreaseHeight={this.handleDecreaseHeight}

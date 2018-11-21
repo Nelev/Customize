@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Divider, Tooltip } from "antd";
+import { Link } from "react-router-dom";
 
 import "./style.css";
 
@@ -15,7 +16,8 @@ export default class ImageController extends React.Component {
             handleIncreaseLeft,
             handleDecreaseLeft,
             handleResetPosition,
-            handleResetSizes
+            handleResetSizes,
+            gotUploaded
         } = this.props;
         return (
             <div className="c-Controller">
@@ -166,6 +168,12 @@ export default class ImageController extends React.Component {
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <Divider />
+                <div className="c-Checkout">
+                    <Button type="primary" disabled={!gotUploaded}>
+                        <Link to="checkout">Checkout</Link>
+                    </Button>
                 </div>
             </div>
         );
