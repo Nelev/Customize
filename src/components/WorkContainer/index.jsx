@@ -1,50 +1,62 @@
 import React from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import {
+    decreaseWidth,
+    increaseWidth,
+    decreaseHeight,
+    increaseHeight,
+    decreaseTop,
+    increaseTop,
+    decreaseLeft,
+    increaseLeft
+} from "./actions";
 import ImageController from "../ImageController";
 import "./style.css";
 
 export const spacingUnit = 20;
 
-export default class WorkContainer extends React.Component {
+class WorkContainer extends React.Component {
     state = { imgWidth: 100, imgHeight: 100, imgTop: 200, imgLeft: 200 };
 
     handleDecreaseHeight = () => {
-        const newHeight = this.state.imgHeight - spacingUnit;
-        this.setState({ imgHeight: newHeight });
+        const { decreaseHeight } = this.props;
+        decreaseHeight();
     };
 
     handleDecreaseLeft = () => {
-        const newLeft = this.state.imgLeft - spacingUnit;
-        this.setState({ imgLeft: newLeft });
+        const { decreaseLeft } = this.props;
+        decreaseLeft();
     };
 
     handleDecreaseTop = () => {
-        const newTop = this.state.imgTop - spacingUnit;
-        this.setState({ imgTop: newTop });
+        const { decreaseTop } = this.props;
+        decreaseTop();
     };
 
     handleDecreaseWidth = () => {
-        const newWidth = this.state.imgWidth - spacingUnit;
-        this.setState({ imgWidth: newWidth });
+        const { decreaseWidth } = this.props;
+        decreaseWidth();
     };
 
     handleIncreaseHeight = () => {
-        const newHeight = this.state.imgHeight + spacingUnit;
-        this.setState({ imgHeight: newHeight });
+        const { increaseHeight } = this.props;
+        increaseHeight();
     };
 
     handleIncreaseLeft = () => {
-        const newLeft = this.state.imgLeft + spacingUnit;
-        this.setState({ imgLeft: newLeft });
+        const { increaseLeft } = this.props;
+        increaseLeft();
     };
 
     handleIncreaseTop = () => {
-        const newTop = this.state.imgTop + spacingUnit;
-        this.setState({ imgTop: newTop });
+        const { increaseTop } = this.props;
+        increaseTop();
     };
 
     handleIncreaseWidth = () => {
-        const newWidth = this.state.imgWidth + spacingUnit;
-        this.setState({ imgWidth: newWidth });
+        const { increaseWidth } = this.props;
+        increaseWidth();
     };
 
     handleResetPosition = () => {
@@ -55,7 +67,13 @@ export default class WorkContainer extends React.Component {
         this.setState({ imgHeight: 100, imgWidth: 100 });
     };
     render() {
-        const { imgUploaded } = this.props;
+        const {
+            imgUploaded,
+            imgWidth,
+            imgHeight,
+            imgTop,
+            imgLeft
+        } = this.props;
         const gotUploaded = imgUploaded !== null ? true : false;
         return (
             <div className="c-Create">
@@ -65,10 +83,10 @@ export default class WorkContainer extends React.Component {
                             src={imgUploaded}
                             alt=""
                             style={{
-                                width: this.state.imgWidth,
-                                height: this.state.imgHeight,
-                                marginTop: this.state.imgTop,
-                                marginLeft: this.state.imgLeft
+                                width: imgWidth,
+                                height: imgHeight,
+                                marginTop: imgTop,
+                                marginLeft: imgLeft
                             }}
                         />
                     </div>
@@ -92,3 +110,30 @@ export default class WorkContainer extends React.Component {
         );
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        imgWidth: state.components.workContainer.imgWidth,
+        imgHeight: state.components.workContainer.imgHeight,
+        imgTop: state.components.workContainer.imgTop,
+        imgLeft: state.components.workContainer.imgLeft
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        decreaseWidth: bindActionCreators(decreaseWidth, dispatch),
+        increaseWidth: bindActionCreators(increaseWidth, dispatch),
+        decreaseHeight: bindActionCreators(decreaseHeight, dispatch),
+        increaseHeight: bindActionCreators(increaseHeight, dispatch),
+        decreaseTop: bindActionCreators(decreaseTop, dispatch),
+        increaseTop: bindActionCreators(increaseTop, dispatch),
+        decreaseLeft: bindActionCreators(decreaseLeft, dispatch),
+        increaseLeft: bindActionCreators(increaseLeft, dispatch)
+    };
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(WorkContainer);

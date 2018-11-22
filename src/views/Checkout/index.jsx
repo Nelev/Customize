@@ -1,4 +1,4 @@
-import { Col, Input, Row } from "antd";
+import { Col, Row } from "antd";
 import React from "react";
 import { history } from "react-router-prop-types";
 import { Field, reduxForm } from "redux-form";
@@ -29,7 +29,7 @@ class Checkout extends React.Component {
                                 <div>
                                     <Field
                                         name="firstName"
-                                        component={Input}
+                                        component="input"
                                         type="text"
                                         placeholder="First Name"
                                     />
@@ -40,7 +40,7 @@ class Checkout extends React.Component {
                                 <div>
                                     <Field
                                         name="lastName"
-                                        component={Input}
+                                        component="input"
                                         type="text"
                                         placeholder="Last Name"
                                     />
@@ -51,7 +51,7 @@ class Checkout extends React.Component {
                                 <div>
                                     <Field
                                         name="email"
-                                        component={Input}
+                                        component="input"
                                         type="email"
                                         placeholder="Email"
                                     />

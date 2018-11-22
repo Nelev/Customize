@@ -3,7 +3,13 @@
 }
 
 .v-Checkout .ant-input {
-    width: 50%;
+    width: 30%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.v-Checkout .ant-select {
+    width: 30%;
     margin-top: 5px;
     margin-bottom: 5px;
 }
