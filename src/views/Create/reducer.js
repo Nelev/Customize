@@ -5,7 +5,7 @@ const defaultState = {
     file: null
 };
 
-export default (state = defaultState, action, imgUrl, file) => {
+export default (state = defaultState, action) => {
     const { type, payload } = action;
     switch (type) {
         case SET_IMAGE:

@@ -1,12 +1,12 @@
 import { Col, Row } from "antd";
 import React from "react";
 import { history } from "react-router-prop-types";
-import { Field, reduxForm } from "redux-form";
 
+import CheckoutForm from "../../components/CheckoutForm";
 import Header from "../../components/Header";
 import "./style.css";
 
-class Checkout extends React.Component {
+export default class Checkout extends React.Component {
     static propTypes = {
         history: history.isRequired
     };
@@ -16,83 +16,13 @@ class Checkout extends React.Component {
     };
 
     render() {
-        const { pristine, reset, submitting } = this.props;
         return (
             <div className="v-Checkout">
                 <Row gutter={16}>
                     <Col span={4} />
                     <Col span={16}>
                         <Header />
-                        <form onSubmit={this.handleSubmit}>
-                            <div>
-                                <label>First Name</label>
-                                <div>
-                                    <Field
-                                        name="firstName"
-                                        component="input"
-                                        type="text"
-                                        placeholder="First Name"
-                                    />
-                                </div>
-                            </div>
-                            <div>
-                                <label>Last Name</label>
-                                <div>
-                                    <Field
-                                        name="lastName"
-                                        component="input"
-                                        type="text"
-                                        placeholder="Last Name"
-                                    />
-                                </div>
-                            </div>
-                            <div>
-                                <label>Email</label>
-                                <div>
-                                    <Field
-                                        name="email"
-                                        component="input"
-                                        type="email"
-                                        placeholder="Email"
-                                    />
-                                </div>
-                            </div>
-                            <div>
-                                <label>Size</label>
-                                <div>
-                                    <Field
-                                        name="favoriteColor"
-                                        component="select"
-                                    >
-                                        <option />
-                                        <option value="s">Small</option>
-                                        <option value="m">Medium</option>
-                                        <option value="l">Large</option>
-                                    </Field>
-                                </div>
-                            </div>
-                            <div>
-                                <label>Notes</label>
-                                <div>
-                                    <Field name="notes" component="textarea" />
-                                </div>
-                            </div>
-                            <div>
-                                <button
-                                    type="submit"
-                                    disabled={pristine || submitting}
-                                >
-                                    Submit
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled={pristine || submitting}
-                                    onClick={reset}
-                                >
-                                    Clear
-                                </button>
-                            </div>
-                        </form>
+                        <CheckoutForm onSubmit={this.handleSubmit} />
                     </Col>
                     <Col span={4} />
                 </Row>
@@ -100,7 +30,3 @@ class Checkout extends React.Component {
         );
     }
 }
-
-export default reduxForm({
-    form: "checkout"
-})(Checkout);

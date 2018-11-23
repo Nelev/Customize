@@ -20,14 +20,10 @@ export default class Header extends React.Component {
         );
     }
 
-    renderLogo() {
-        return <img alt="" src="url(./logo.png)" />;
-    }
-
     render() {
         return (
             <div className="c-Header">
-                <div className="c-Header-Logo">{this.renderLogo()}</div>
+                <div className="c-Header-Logo" />
                 <div className="c-Header-Links">{this.renderLinks()}</div>
             </div>
         );

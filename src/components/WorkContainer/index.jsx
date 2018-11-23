@@ -17,8 +17,6 @@ import "./style.css";
 export const spacingUnit = 20;
 
 class WorkContainer extends React.Component {
-    state = { imgWidth: 100, imgHeight: 100, imgTop: 200, imgLeft: 200 };
-
     handleDecreaseHeight = () => {
         const { decreaseHeight } = this.props;
         decreaseHeight();
